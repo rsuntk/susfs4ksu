@@ -9,6 +9,9 @@ This is only experimental code, that said it can harm your system or cause perfo
 ## Compatibility ##
 The susfs kernel patches may differ for different kernel version. You may need to create your own patches for your kernel.
 
+## Requirements ##
+Make sure to enable `CONFIG_INIT_STACK_ALL_ZERO`, to fix reboot on start.
+
 ## Patch Instruction ##
 1. Run `cp ./kernel_patches/KernelSU/10_enable_susfs_for_ksu.patch $KERNEL_ROOT/KernelSU/`
 2. Run `cp ./kernel_patches/<kernel_version>/50_add_susfs_in_kernel.patch $KERNEL_ROOT/`
